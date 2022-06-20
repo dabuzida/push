@@ -2,23 +2,28 @@ import 'dart:convert';
 import 'dart:io';
 
 void main() {
-  String jsonString = '''{  
-"name": "홍길동",
+  String jsonString = '''[{  
+  "name": "홍길동",
   "email": "gildong@example.com"
-  }''';
-  print(jsonString);
+  },{  
+  "name": "고수정",
+  "email": "gogo@example.com"
+  }]''';
+  // print(jsonString);
 
-  Map<String, dynamic> userMap = jsonDecode(jsonString);
-  var user = User.fromJson(userMap);
+  List userMap = jsonDecode(jsonString);
+  // Map<String, dynamic> userMap = jsonDecode(jsonString);
+  // var user = User.fromJson(userMap);
 
   print(userMap);
-  print(user);
-  print(user.name);
-  print(user.email);
+  print(userMap.runtimeType);
+  // print(user);
+  // print(user.name);
+  // print(user.email);
 
-  String json = jsonEncode(user);
-  print(json);
-  print(json.runtimeType);
+  // String json = jsonEncode(user);
+  // print(json);
+  // print(json.runtimeType);
 }
 
 class User {
