@@ -6,10 +6,10 @@ void main() {
   "name": "홍길동",
   "email": "gildong@example.com"
   }''';
-  print(jsonString);
 
   Map<String, dynamic> user = jsonDecode(jsonString);
-  sleep(Duration(seconds: 2));
 
-  print(user);
+  // print('${} >> $');
+  print('${jsonString.runtimeType} >> $jsonString');
+  print('${user.runtimeType} >> $user');
 }
