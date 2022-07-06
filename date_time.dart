@@ -17,7 +17,7 @@ void main() {
   // UTC 영국 그리니치 천문대 기준, 미적용시 +9시간 되어 local time(한국) 시간 적용
 
   final timestamp = 1627510285; // timestamp in seconds
-  final timestamp2 = 1656914151709; // timestamp in seconds
+  final timestamp2 = 1637737738012; // timestamp in seconds
 
   final DateTime date = DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);
   final DateTime date2 = DateTime.fromMillisecondsSinceEpoch(timestamp2, isUtc: true);
@@ -25,4 +25,20 @@ void main() {
   print('date >> $date');
   print('date2 UTC time zone >> $date2');
   print('date3 local time zone >> $date3');
+
+  // date 측정 날짜
+  int x = 1637737738012; // timestamp in seconds
+
+  DateTime xx = DateTime.fromMillisecondsSinceEpoch(x);
+  print(xx);
+  print(xx.runtimeType);
+
+  // birth day생년월일
+  int t = 406911600000; // timestamp in seconds
+  DateTime tt = DateTime.fromMillisecondsSinceEpoch(t);
+  print(tt);
+  print(tt.toString().split(' '));
+  print(tt.toString().split(' ')[0]);
+
+  // birth year 생년만
 }
