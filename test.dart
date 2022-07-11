@@ -5,9 +5,8 @@ void main() async {
   // await Future.delayed(Duration(seconds: 2), () => print(Random().nextInt(10)));
   // print(Random().nextInt(10));
 
-  int v = 12;
-  for (int i = 0; i < 5; i++, v++) {
-    print(i);
-    print(v);
-  }
+  int x = 12345;
+  int y = x ~/ 1000;
+  print(x);
+  print(y);
 }
