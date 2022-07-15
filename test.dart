@@ -19,9 +19,9 @@ void main() async {
     print(328938939);
   }
 
-  // widget.showPublishMenu && (hasValidData != null && hasValidData!) ? _buildUIPublishMenu() : SizedBox.shrink(),
   bool? k;
-  if (k != null && ) {
+  k = true;
+  if (k != null && k!) {
     print(49494);
   }
 }
