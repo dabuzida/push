@@ -4,7 +4,11 @@ import 'dart:math';
 
 void main() {
   // DateTime date = new DateTime(1699081618);
-  // print(DateTime.now());
+  print(DateTime.now());
+  print(DateTime.now().millisecondsSinceEpoch);
+  int _epoch = DateTime.now().millisecondsSinceEpoch;
+  print(DateTime(_epoch));
+
   // print(date);
   final DateTime currentTime = DateTime.now();
   print('currentTime >> $currentTime');
