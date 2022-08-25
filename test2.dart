@@ -1,19 +1,20 @@
 import 'dart:math';
 
 void main() {
-  print(Five.x);
+  Map<String, bool> _pow = {
+    'hasRootPower': false,
+    'hasManagerPower': false,
+    'hasVideoPower': false,
+    'hasBogunsoPower': false,
+    'hasCallPower': false,
+    'hasCallReportPublishPower': false,
+    'hasCallListPower': false,
+    'hasCallInfoFullPower': false,
+  };
 
-  Five ff = Five();
-  // print(ff.x);
-  print(ff.y);
-  int aa = ff.a();
-  print('630592f0732c950028b58dd8'.length);
-}
-
-class Five {
-  static const x = 1;
-  final y = 3;
-  int a() {
-    return 22;
-  }
+  print(_pow.keys.elementAt(0));
+  print(_pow.keys.elementAt(7));
+  print(_pow.keys.elementAt(0).runtimeType);
+  print(_pow.values.elementAt(0));
+  print(_pow.values.elementAt(0).runtimeType);
 }
