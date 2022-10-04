@@ -1,9 +1,9 @@
 import 'dart:math';
 
 void main() {
-  String xx = '-0';
-  int x = int.parse(xx);
-  print(xx);
-  print(x);
-  print(x.runtimeType);
+  String x = '12345';
+  print(x.substring(0));
+  print(x.substring(3));
+  print(x.substring(1, 2));
+  print(x.substring(1, 4));
 }
