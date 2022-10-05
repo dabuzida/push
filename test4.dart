@@ -1,9 +1,16 @@
 import 'dart:math';
 
 void main() {
-  String x = '12345';
-  print(x.substring(0));
-  print(x.substring(3));
-  print(x.substring(1, 2));
-  print(x.substring(1, 4));
+  num a = 11;
+  num b = 11.343;
+  print(a / 11);
+  print(b / 3);
+
+  int w = 16420;
+  print(w ~/ 3600);
+  print(w % 3600);
+
+  // String x = ' ';
+  // int xx = int.parse(x);
+  // print(xx);
 }
