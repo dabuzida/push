@@ -43,3 +43,35 @@ class A{
 
 
  */
+
+class Animal {
+  final String _gender;
+  final int numberOfArm;
+  final int numberOfLeg;
+  Animal(
+    this._gender,
+    this.numberOfArm,
+    this.numberOfLeg,
+  );
+}
+
+class Monkey extends Animal {
+  Monkey(super.gender, super.numberOfArm, super.numberOfLeg);
+}
+
+mixin Person implements Animal {}
+
+class Idol {
+  String name;
+  String group;
+  // Idol(this.group, this.name);
+  // Idol({required this.group, required this.name});
+  // Idol({required group, required name})
+  //     : this.name = name,
+  //       this.group = group;
+  Idol({
+    required String group,
+    required String name,
+  })  : this.name = name,
+        this.group = group;
+}
