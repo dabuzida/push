@@ -34,3 +34,8 @@ class Theta {
   // int t = 234892348923;
   String t = 'theta';
 }
+
+void main() {
+  Alpha a = Alpha();
+  print(a.beta!.gamma!.delta!.epsilon!.zeta.theta!.t);
+}
