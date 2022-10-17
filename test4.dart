@@ -10,17 +10,44 @@ void main() {
   // print(w ~/ 3600);
   // print(w % 3600);
 
-  for (int i = 0; i < 3000; i++) {
-    double num = Random().nextDouble();
-    // print(Random().nextInt(2));
-    String s = '010';
-    if (num > 0.09) {
-      // print(num);
-      int n = (num * 100000000).ceil();
-      // print((num * 100000000).ceil());
-      s += n.toString();
-      print(s);
-      // print((num * 100000000000).ceil());
+  print(pow(2, 4));
+
+  int n = 1;
+  print(n + 0.0);
+  print((n + 0.0).runtimeType);
+  double num = 2932.549203400;
+  print(num.toStringAsFixed(2));
+  print(num.toStringAsFixed(2).runtimeType);
+  print(double.parse(num.toStringAsFixed(2)));
+}
+
+extension IntExtension on int {
+  String get secondsToElapsedTimeFormat {
+    String str = '';
+
+    final int h = this ~/ 3600;
+    if (h > 0) {
+      str += '${h.toString().padLeft(1, '0')}시간';
     }
+
+    if (str.isNotEmpty) {
+      str += ' ';
+    }
+
+    final int m = (this ~/ 60) % 60;
+    if (m > 0) {
+      str += '${m.toString().padLeft(1, '0')}분';
+    }
+
+    if (str.isNotEmpty) {
+      str += ' ';
+    }
+
+    final int s = this % 60;
+    if (s >= 0) {
+      str += '${s.toString().padLeft(1, '0')}초';
+    }
+
+    return str;
   }
 }
