@@ -9,7 +9,10 @@ void main() {
   // int w = 16420;
   // print(w ~/ 3600);
   // print(w % 3600);
-
+  print((16420 / 3600).toStringAsFixed(1));
+  print((16420 / 3600).toStringAsFixed(1).runtimeType);
+  print(double.parse((16420 / 3600).toStringAsFixed(1)));
+  print(double.parse((16420 / 3600).toStringAsFixed(1)).runtimeType);
   print(pow(2, 4));
 
   int n = 1;

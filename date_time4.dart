@@ -10,4 +10,9 @@ void main() {
   print(x);
   print(y);
   print(z);
+  int xy = DateTime(2022, 08, 28).millisecondsSinceEpoch;
+  print(xy);
+  final xu = DateTime.fromMillisecondsSinceEpoch(xy);
+  print(xu);
+  // int xx = '2022-08-28 00:00:00'.millisecondsSinceEpoch;
 }
