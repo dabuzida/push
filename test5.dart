@@ -14,4 +14,13 @@ void main() {
     maxValue = max(maxValue, list[i]);
   }
   print(maxValue);
+
+  DateTime _dateTimeNow = DateTime.now();
+  int mm = _dateTimeNow.millisecondsSinceEpoch;
+  int jj = _dateTimeNow.add(const Duration(days: -44)).millisecondsSinceEpoch;
+  int nn = _dateTimeNow.add(const Duration(days: 4)).millisecondsSinceEpoch;
+  print(_dateTimeNow);
+  print(mm);
+  print(jj);
+  print(nn);
 }
