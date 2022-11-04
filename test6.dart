@@ -1,29 +1,24 @@
-void main() {
-  int l = 2;
-  switch (l) {
-    case 1:
-      l = 22;
-      print(l);
-      break;
-    default:
-      l = 33;
-      print(l);
-      break;
-      print('^^');
-  }
-  print(l);
+enum Xx { agree, deny, noneInfo }
 
-  final Map<String, int> ss = {
-    'x': 0,
-    'y': 0,
+void main() {
+  Map xu = {
+    Xx.agree: 11,
+    Xx.agree.toString(): 11,
+    Xx.deny.toString(): 21,
+    Xx.noneInfo.toString(): 33,
   };
+  print(xu);
+  print(xu.keys);
+  print(xu.keys.first);
+  print(xu['Xx.agree']);
+  print(xu['xx.agree']);
+  print(xu['agree']);
 
   // print(ss['x']);
   // int a = ss['x']!;
   // ss['x'] = a + 1;
   // print(ss['x']);
   // final b = ss.values.
-  final b = ss.values.every((e) => e == 0);
   // print(b);
   // print(ss.values);
   // print(ss.values.runtimeType);
