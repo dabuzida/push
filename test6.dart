@@ -9,21 +9,49 @@ int get pp {
   return x;
 }
 
+enum Good {
+  a('aaa'),
+  b('bbb'),
+  c('ccc'),
+  d('ddd'),
+  ;
+
+  const Good(this.title);
+
+  final String title;
+
+  bool isEnable() {
+    if (this == Good.d) {
+      return false;
+    }
+    return true;
+  }
+}
+
 void main() {
-  final aa = [1, 2, 3, 4, 5];
+  final int a = 1;
+  final double b = 112.323;
+  final num c = 12312321.123123;
+  print(a.toStringAsFixed(1));
+  print(b.toStringAsFixed(1));
+  print(b.floor());
+  print(c.toStringAsFixed(1));
+  Good x = Good.a;
+  print(x.title);
+  // final aa = [1, 2, 3, 4, 5];
 
-  print(qq);
-  print(pp);
-  Map xu = {
-    Xx.agree: 11,
-    Xx.agree.toString(): 11,
-    Xx.deny.toString(): 21,
-    Xx.noneInfo.toString(): 33,
-    null: 33,
-  };
+  // print(qq);
+  // print(pp);
+  // Map xu = {
+  //   Xx.agree: 11,
+  //   Xx.agree.toString(): 11,
+  //   Xx.deny.toString(): 21,
+  //   Xx.noneInfo.toString(): 33,
+  //   null: 33,
+  // };
 
-  List<dynamic> x = [1, 2, 3, null];
-  print(x);
+  // List<dynamic> x = [1, 2, 3, null];
+  // print(x);
   // print(xu[null]);
   // int as = xu[null];
   // xu[null] = as + 1;

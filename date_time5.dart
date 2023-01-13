@@ -1,12 +1,18 @@
 void main() {
-  final DateTime x = DateTime(2022, 11, 3, 9);
-  final int xx = x.millisecondsSinceEpoch;
+  // final DateTime now = DateTime.now(); // 2022-12-27 10:22:01.619368
+  // print(now);
+  // print(now.year);
+  // print(now.year.runtimeType);
+
+  // final DateTime x = DateTime(2022, 11, 3);
+  // print(x);
+  // final int xx = x.millisecondsSinceEpoch;
   // print(xx);
-  DateTime z = DateTime.fromMillisecondsSinceEpoch(xx);
+  // DateTime z = DateTime.fromMillisecondsSinceEpoch(xx);
   // print(z);
 
-  final String ss = '1122';
-  final String rr = '112';
+  // final String ss = '1122';
+  // final String rr = '112';
   // print(ss == rr);
   // print(identical(ss, rr));
   // print(ss.compareTo(rr));
@@ -25,11 +31,11 @@ void main() {
 
   // print(d3);
   // print(d4);
-  print(d1 == d2);
-  print(identical(d1, d2));
-  print(d1.compareTo(d2));
-  print('====');
-  print(d3 == d4);
-  print(identical(d3, d4));
-  print(d3.compareTo(d4));
+  // print(d1 == d2);
+  // print(identical(d1, d2));
+  // print(d1.compareTo(d2));
+  // print('====');
+  // print(d3 == d4);
+  // print(identical(d3, d4));
+  // print(d3.compareTo(d4));
 }
