@@ -11,11 +11,11 @@ void main() {
   // DateTime z = DateTime.fromMillisecondsSinceEpoch(xx);
   // print(z);
 
-  // final String ss = '1122';
-  // final String rr = '112';
-  // print(ss == rr);
-  // print(identical(ss, rr));
-  // print(ss.compareTo(rr));
+  final String ss = '1122';
+  final String rr = '112';
+  print(ss == rr);
+  print(identical(ss, rr));
+  print(ss.compareTo(rr));
 
   final List<String> list = <String>[
     '2022-11-18 11:22',

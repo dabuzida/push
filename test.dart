@@ -1,45 +1,61 @@
-import 'dart:math';
+void main() {
+  String str = 'make';
+  String str2 = 'make';
 
-class Person {
-  String? name;
-  int? age;
-  String? sex;
-  // Person(){}
-  Person({String? name, int? age, String? sex}) {
-    this.name = name;
-    this.age = age;
-    this.sex = sex;
-  }
+  print(str == str2);
+  print(str.compareTo(str2));
+  print(identical(str, str2));
 }
 
-void main() async {
-  Person p1 = new Person();
-  Person p2 = new Person(age: 30);
-  print(p2.age);
-  print(p2.name);
-  print(p2.sex);
+enum CountryCode {
+  unitedStates('1', 'UnitedStatesCode'),
+  russia('7', 'RussiaCode'),
+  southAfrica('27', 'SouthAfricaCode'),
+  belgium('32', 'BelgiumCode'),
+  france('33', 'FranceCode'),
+  spain('34', 'SpainCode'),
+  italy('39', 'ItalyCode'),
+  romania('40', 'RomaniaCode'),
+  unitedKingdom('44', 'UnitedKingdomCode'),
+  sweden('46', 'SwedenCode'),
+  norway('47', 'NorwayCode'),
+  poland('48', 'PolandCode'),
+  germany('49', 'GermanyCode'),
+  peru('51', 'PeruCode'),
+  argentina('54', 'ArgentinaCode'),
+  brazil('55', 'BrazilCode'),
+  chile('56', 'ChileCode'),
+  newZealand('64', 'NewZealandCode'),
+  japan('81', 'JapanCode'),
+  southKorea('82', 'SouthKoreaCode'),
+  china('86', 'ChinaCode'),
+  india('91', 'IndiaCode'),
+  pakistan('92', 'PakistanCode'),
+  bulgaria('359', 'BulgariaCode'),
+  belarus('375', 'BelarusCode'),
+  ukraine('380', 'UkraineCode'),
+  czechRepublic('420', 'CzechRepublicCode'),
+  uruguay('598', 'UruguayCode'),
+  australia('672', 'AustraliaCode'),
+  hongKong('852', 'HongKongCode'),
+  ;
 
-  // print(Random().nextInt(10));
-  // await Future.delayed(Duration(seconds: 2), () => print(Random().nextInt(10)));
-  // print(Random().nextInt(10));
+  const CountryCode(this.countryCodeDigit, this.translationKey);
 
-  // int x = 12345;
-  // int y = x ~/ 1000;
-  // print(x);
-  // print(y);
+  final String countryCodeDigit;
+  final String translationKey;
 
-  // List xx = [];
-  // if (xx is List) {
-  //   print(1);
-  // }
-  // if (true && 'asd' != null && true) {
-  //   // if (true && 'asd' == null) {
-  //   print(328938939);
-  // }
+  String get countryCode {
+    return '+$countryCodeDigit';
+  }
 
-  // bool? k;
-  // k = true;
-  // if (k != null && k!) {
-  //   print(49494);
-  // }
+  static CountryCode? make({required String code}) {
+    for (final CountryCode countryCode in CountryCode.values) {
+      if (countryCode.countryCode == code) {
+        return countryCode;
+      }
+    }
+
+    return null;
+  }
 }

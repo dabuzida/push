@@ -1,23 +1,22 @@
-import 'dart:math';
+enum AlzwinLanguage {
+  ko('ko', '한국어'),
+  en('en', 'English'),
+  ja('ja', '日本語'),
+  quantity('', ''),
+  ;
+
+  const AlzwinLanguage(
+    this.code,
+    this.localizedName,
+  );
+
+  final String code;
+  final String localizedName;
+}
 
 void main() {
-  Animal _animal = Animal("tiger", 2, Type(false), false);
-  print(_animal);
-  print(_animal.herbivores);
+  int? x;
 
-  _animal.herbivores = !_animal.herbivores;
-  print(_animal.herbivores);
-}
-
-class Animal {
-  String name;
-  int age;
-  bool herbivores;
-  Type type;
-  Animal(this.name, this.age, this.type, this.herbivores);
-}
-
-class Type {
-  bool isTwoFoot;
-  Type(this.isTwoFoot);
+  // x ??= 1;
+  print(x ?? 2);
 }

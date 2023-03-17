@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'dart:math';
+
 void _123() {
   one();
   two();
@@ -86,7 +87,4 @@ void main() async {
 
   // final aaa = receipt();
   // print(aaa);
-
-  
 }
-
