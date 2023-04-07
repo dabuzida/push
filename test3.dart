@@ -15,8 +15,19 @@ enum AlzwinLanguage {
 }
 
 void main() {
-  int? x;
+  // null operator: ??=
 
-  // x ??= 1;
-  print(x ?? 2);
+  int? x;
+  int? y;
+
+  x ??= 11;
+  // if (x != null) {
+  if (x == null) {
+    y = 13;
+  }
+
+  y ??= 15;
+
+  print(x);
+  print(y);
 }
