@@ -27,16 +27,30 @@ void main() {
   // print(s);
   // print(s2);
 
+// : 1개월 / 3개월 / 6개월 / 1년 / 30년
+
+  var date = new DateTime(2019, 9, 4);
+  var newDate = new DateTime(date.year + 1, date.month + 2, date.day);
+
   final DateTime now = DateTime.now();
+  final DateTime side = DateTime(now.year, now.month + 3);
+  final DateTime inner = DateTime(now.year + 10, now.month + 3, now.day, now.hour, now.minute, now.second, now.millisecond, now.microsecond);
+
+  print(now);
+  print(side);
+  print(inner);
   final int x = now.millisecondsSinceEpoch;
 
-  final DateTime nowTime = DateTime.fromMillisecondsSinceEpoch(x);
-  final DateTime timeAfterNow = nowTime.add(Duration(hours: 1));
+  // final int future = now.add(const Duration(: -45)).millisecondsSinceEpoch;
 
-  print(nowTime);
-  print(timeAfterNow);
+  // print(future);
+  // final DateTime nowTime = DateTime.fromMillisecondsSinceEpoch(x);
+  // final DateTime timeAfterNow = nowTime.add(Duration(hours: 1));
 
-  final String dateTime = DateTime.fromMillisecondsSinceEpoch(x, isUtc: true).toString();
-  print(dateTime);
-  print(11.23.toInt());
+  // print(nowTime);
+  // print(timeAfterNow);
+
+  // final String dateTime = DateTime.fromMillisecondsSinceEpoch(x, isUtc: true).toString();
+  // print(dateTime);
+  // print(11.23.toInt());
 }
