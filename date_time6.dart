@@ -29,17 +29,41 @@ void main() {
 
 // : 1개월 / 3개월 / 6개월 / 1년 / 30년
 
-  var date = new DateTime(2019, 9, 4);
-  var newDate = new DateTime(date.year + 1, date.month + 2, date.day);
+  // var date = new DateTime(2019, 9, 4);
+  // var newDate = new DateTime(date.year + 1, date.month + 2, date.day);
 
-  final DateTime now = DateTime.now();
-  final DateTime side = DateTime(now.year, now.month + 3);
-  final DateTime inner = DateTime(now.year + 10, now.month + 3, now.day, now.hour, now.minute, now.second, now.millisecond, now.microsecond);
+  // final DateTime now = DateTime.now();
+  // final DateTime side = DateTime(now.year, now.month + 3);
+  // final DateTime inner = DateTime(now.year + 10, now.month + 3, now.day, now.hour, now.minute, now.second, now.millisecond, now.microsecond);
 
-  print(now);
-  print(side);
-  print(inner);
-  final int x = now.millisecondsSinceEpoch;
+  // print(now);
+  // print(side);
+  // print(inner);
+  // final int x = now.millisecondsSinceEpoch;
+
+  // 1683782412428
+
+  print(DateTime.fromMillisecondsSinceEpoch(1684982379527));
+
+  // DateTime now = DateTime.now();
+  // final xx = now.add(const Duration(seconds: 10));
+  // final yy = now.subtract(const Duration(seconds: 10));
+  // print(yy);
+  // print(xx);
+  // print(now);
+  // print(now.second);
+  // print(now.microsecond);
+  // print(now.millisecond);
+  // print(now.microsecondsSinceEpoch);
+  // print(now.millisecondsSinceEpoch);
+
+  // final y = now.millisecondsSinceEpoch;
+  // print(y);
+
+  // DateTime x = DateTime.fromMillisecondsSinceEpoch(1683782412428);
+  // print(x);
+  // print(x.toString().substring(0, 16));
+  // print(x.runtimeType);
 
   // final int future = now.add(const Duration(: -45)).millisecondsSinceEpoch;
 

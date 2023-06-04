@@ -1,24 +1,23 @@
 void main() {
-  final Power? myPower = Power(have: true);
-  print(myPower);
-  final terrestrial = {
-    1: 'Mercury',
-    2: 'Venus',
-    3: 'Earth',
-    // 4: myPower,
-  };
-  terrestrial.removeWhere((key, value) => value == null);
-  // myPower!.toJson()..removeWhere((String key, dynamic value) => value == null);
-  // print(terrestrial); // {1: Mercury, 2: Venus}
-
-  // print(terrestrial
-  //   ..entries
-  //   ..keys.);
+  xxx(
+    callback: () => print(2),
+  );
 }
 
-class Power {
-  Power({this.have, this.sell, this.change});
-  bool? have;
-  bool? sell;
-  bool? change;
+Future<void> xxx({
+  String? height,
+  void Function()? callback,
+}) async {
+  if (callback == null) {
+    Future<void>.delayed(
+      const Duration(seconds: 1),
+      () {
+        print(1);
+      },
+    );
+  } else {
+    callback();
+  }
+//
+  // return true;
 }

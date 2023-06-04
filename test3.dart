@@ -15,7 +15,13 @@ enum AlzwinLanguage {
 }
 
 void main() {
-  example();
+  int? x;
+
+  if (x == null || x == 1) {
+    print(1);
+  }
+  print(2);
+  // example();
 
   // Future future = Future.delayed(
   //   Duration(milliseconds: 0),
