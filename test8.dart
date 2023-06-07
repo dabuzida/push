@@ -1,15 +1,12 @@
-import 'dart:math';
-import 'dart:convert';
+void main() async {
+  print(1);
 
-void main() {
-  List s = [];
-  s.add(11);
-  s.insert(0, 3);
-  s.add(1);
-
-  print(s);
+  await _xx();
+  print(2);
 }
 
-String? get x {
-  return null;
+Future<void> _xx() async {
+  print('@@@');
+  Future<void>.delayed(const Duration(seconds: 2));
+  print('###');
 }
