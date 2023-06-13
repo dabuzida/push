@@ -1,12 +1,14 @@
-void main() async {
-  print(1);
+void main() {
+  print('start');
 
-  await _xx();
-  print(2);
+  _xx();
+  print('finish');
 }
 
-Future<void> _xx() async {
+void _xx() {
   print('@@@');
-  Future<void>.delayed(const Duration(seconds: 2));
+  for (int i = 4; i < 10; i++) {
+    print(i);
+  }
   print('###');
 }
