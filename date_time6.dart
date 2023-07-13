@@ -41,40 +41,26 @@ void main() {
   // print(inner);
   // final int x = now.millisecondsSinceEpoch;
 
-  // 1683782412428
+  final DateTime now = DateTime.now();
+  print('현재: $now');
+  print('현재 milliseconds: ${now.millisecondsSinceEpoch}');
+  print('현재 microseconds: ${now.microsecondsSinceEpoch}');
 
-  print(DateTime.fromMillisecondsSinceEpoch(1684982379527));
+  print('');
+  final DateTime nowAfterTwoMinutes = DateTime.now().add(const Duration(minutes: 2));
+  print('현재부터 2분후: $nowAfterTwoMinutes');
+  print('현재부터 2분후 milliseconds: ${nowAfterTwoMinutes.millisecondsSinceEpoch}');
+  print('현재부터 2분후 microseconds: ${nowAfterTwoMinutes.microsecondsSinceEpoch}');
 
-  // DateTime now = DateTime.now();
-  // final xx = now.add(const Duration(seconds: 10));
-  // final yy = now.subtract(const Duration(seconds: 10));
-  // print(yy);
-  // print(xx);
-  // print(now);
-  // print(now.second);
-  // print(now.microsecond);
-  // print(now.millisecond);
-  // print(now.microsecondsSinceEpoch);
-  // print(now.millisecondsSinceEpoch);
+  print('');
+  final DateTime myDateTime = DateTime(2023, 7, 13, 13, 40);
+  print('myDateTime: $myDateTime');
+  print('myDateTime milliseconds: ${myDateTime.millisecondsSinceEpoch}');
+  print('myDateTime microseconds: ${myDateTime.microsecondsSinceEpoch}');
 
-  // final y = now.millisecondsSinceEpoch;
-  // print(y);
-
-  // DateTime x = DateTime.fromMillisecondsSinceEpoch(1683782412428);
-  // print(x);
-  // print(x.toString().substring(0, 16));
-  // print(x.runtimeType);
-
-  // final int future = now.add(const Duration(: -45)).millisecondsSinceEpoch;
-
-  // print(future);
-  // final DateTime nowTime = DateTime.fromMillisecondsSinceEpoch(x);
-  // final DateTime timeAfterNow = nowTime.add(Duration(hours: 1));
-
-  // print(nowTime);
-  // print(timeAfterNow);
-
-  // final String dateTime = DateTime.fromMillisecondsSinceEpoch(x, isUtc: true).toString();
-  // print(dateTime);
-  // print(11.23.toInt());
+  print('');
+  final DateTime dateTimeFromMilli = DateTime.fromMillisecondsSinceEpoch(1684982379527); // 13길이
+  final DateTime dateTimeFromMicro = DateTime.fromMicrosecondsSinceEpoch(1684982379527000); // 16길이
+  print('dateTimeFromMilli: $dateTimeFromMilli');
+  print('dateTimeFromMicro: $dateTimeFromMicro');
 }

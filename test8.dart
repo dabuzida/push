@@ -3,9 +3,10 @@ void main() {
 
   // _xx();
   // print('finish');
-
-  print(AlzWINTestClass.call.name);
-  print(AlzWINTestClass.call.name.runtimeType);
+  DateTime.now();
+  print(DateTime.now());
+  // print(AlzWINTestClass.call.name);
+  // print(AlzWINTestClass.call.name.runtimeType);
 }
 
 void _xx() {
