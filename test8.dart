@@ -1,38 +1,18 @@
+import 'dart:math';
+
 void main() {
-  // print('start');
+  Set a = {1, 2, 3, 4, 5};
+  Set b = {2, 3};
+  Set c = b.difference(a);
+  List d = c.toList();
+  d.toSet();
 
-  // _xx();
-  // print('finish');
-  DateTime.now();
-  print(DateTime.now());
-  // print(AlzWINTestClass.call.name);
-  // print(AlzWINTestClass.call.name.runtimeType);
-}
+  // print(c);
+  // print(d);
 
-void _xx() {
-  print('@@@');
-  for (int i = 4; i < 10; i++) {
-    print(i);
-  }
-  print('###');
-}
+  Random().nextDouble() * 0xFFFFFF;
+  print(0xFFFFFF);
+  print(Random().nextDouble());
 
-enum AlzWINTestClass {
-  call('전화'), // 전화검사, 개인정보동의
-  screen('앱/웹'), // 문자링크, (회원, 비회원) * (바로시작, 링크생성)
-  upload('업로드'), // 키오스크, 공개검사링크
-  ;
-
-  const AlzWINTestClass(this.serverValue);
-
-  final String serverValue;
-
-  // String get translationKey {
-  //   switch (this) {
-  //     case required:
-  //       return 'required';
-  //     case optional:
-  //       return 'optional';
-  //   }
-  // }
+  print(Random().nextDouble() * 0xFFFFFF);
 }

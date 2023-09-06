@@ -5,6 +5,23 @@ void main() {
   print(str == str2);
   print(str.compareTo(str2));
   print(identical(str, str2));
+  ReqReply reply = ReqReply.OverLimit;
+
+  print(reply); // over_limit
+  print(reply.index); // over_limit
+  print(reply.name); // over_limit
+  print(reply.name.runtimeType); // over_limit
+}
+
+enum ReqReply {
+  Done, // error==null 성공
+  Unauthorized, // 'unauthorized' 인증 실패
+  Error, // 'error' 처리된 에러. 나중에 재시도
+  Duplicate, // 'duplicate' 중복
+  NotFound, // 'not_found' 못찾음
+  Invalid, // 'invalid' 값 에러
+  ServerError, // 'server_error' 서버 미처리 에러
+  OverLimit, // 'over_limit' 초과
 }
 
 enum CountryCode {
