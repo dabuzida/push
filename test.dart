@@ -1,10 +1,10 @@
 void main() {
-  String str = 'make';
-  String str2 = 'make';
+  // String str = 'make';
+  // String str2 = 'make';
 
-  print(str == str2);
-  print(str.compareTo(str2));
-  print(identical(str, str2));
+  // print(str == str2);
+  // print(str.compareTo(str2));
+  // print(identical(str, str2));
   ReqReply reply = ReqReply.OverLimit;
 
   print(reply); // over_limit
