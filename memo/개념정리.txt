@@ -1,0 +1,73 @@
+
+# factory
+ 객체 생성 제어: 새로운 인스턴스, 기존 인스턴스, 서브클래스 인스턴스 같은 어떤 인스턴스를 반환할지
+ 인스턴스 관리: 항상 새 인스턴스를 반환하는 일반적인 생성자와 다름.
+ 기존 인스턴스 반환, 싱글톤 같은 항상 유일하고 단일한 인스턴스 반환
+ 커스텀: 커스텀 혹은 최적화한 인스턴스 생성
+
+ 인스턴스 생성시, 어떤 인스턴스를 반환할지 관리할 수 있게 해주는 플러터 생성자 예약어
+
+# final const
+final: 런 타임에 결정되는 상수. 수정 불가능. 리터럴, DateTime.now().second같은 리터럴 아닌 값으로도 초기화 가능
+const: 컴파일 타임에 결정되는 상수. 수정 불가능. 리터럴 값만으로 초기화 해야함
+
+공통점: 수정불가능한 상수. 수정 불가
+차이점: const는 리터럴값만 할당가능. 선언 시점 다름.
+
+# 예시
+class Car {
+    // 기본 생성자를 factory를 적용하여, 인스턴스 생성제어
+    // Car 클래스 기본생성자로 생성시, _instance라는 인스턴스 반환. 
+    // 외부에서 Car 클래스 생성 가능한 다른 생성자 없으므로 유일한 인스턴스
+    factory Car() => _instance; 
+
+    Car._internal(); // Car 클래스에서만 사용가능한 생성자.
+
+    // static: 컴파일 타임 생성
+    // final: 클래스는 컴파일 타임에 로드되는데 final은 런타임에 결정되는 값 아니었나?
+    // 리터럴 값이 아닌 값으로 초기화하므로 const로 할수없다
+    static final Car _instance = Car._internal();
+
+    // 컴파일 타임에 private 생성자로 _instance 인스턴스 생성하고
+    // Car 클래스의 인스턴스를 생성하려면 factory 기본 생성자로 _instance만 반환하므로 유일한 인스턴스 >> 싱글톤
+
+    // 의미상 싱글톤 순서
+    Car._internal();  // 
+    static final Car instance = Car._internal(); 
+    factory Car() => instance;
+
+    // dart 문법상 위치조정된 순서
+    factory Car() => instance;
+    Car._internal(); 
+    static final Car instance = Car._internal(); 
+}
+
+
+# static
+컴파일 타임 때 static이 붙은 변수는 데이터 섹션 메모리에 할당되고 함수는 텍스트 섹션 메모리에 할당됩니다.
+데이터 섹션 메모리와 텍스트 섹션 메모리에 할당된 데이터는 프로그램이 종료될 때 해제됩니다.
+메모리에 한번 할당되어 프로그램이 종료될 때 해제
+https://jutole.tistory.com/86
+
+#
+(힙 메모리 : 동적할당 메모리가 저장되는 영역)
+(런타임 : 사용할 때)
+(컴파일 타임 : 앱을 실행할 때)
+
+
+# static final 정리하다가 정리가 안되서
+클래스로드
+런타임
+컴파일타임
+앱실행
+앱사용
+static 변수의 메모리 할당과 값 할당 시점 >> static final 의미
+
+static이 컴파일 타임에 생성된다는데
+
+gpt는 static final이 클래스가 처음 로드될 때 메모리에 저장되고, 그 변수의 값이 할당되는 과정은 런타임에 이루어
+
+# 기관 정보 Provider
+기관정보 싱글톤 클래스 는 목록 fetch만 있고
+주기적으로 호출하는건 lifecycle 을 이애하고 적용해보려고햇음
+didPop 등등 route 관련 override
